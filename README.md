@@ -23,11 +23,20 @@ Commit your code regularly and meaningfully. This practice helps both you (in ca
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your answers beforehand.
 
 1. Hashing functions
+    # A function used to map data of an arbitrary size, to a fixed size.
 2. Collision resolution
+    # How instances in a has table are handled, when two or more items are to be kept in the same location.
 3. Performance of basic hash table operations
+    # It is a good rule that the expected length of time for an element searched in a hash table should be between 1/2 and 2. If it is below 1/2, the array is becoming sparse, and a smaller table would likely provide improved results. If the time is over 2, the cost will limit performance.
 4. Load factor
+    # How full a hash table is allowed to get before its capacity increases automatically.
 5. Automatic resizing
+    # When the load factor is reached, automatic resizing will grow the hash table by a specified amount, ususally double the current size.
 6. Various use cases for hash tables
+    # Associative arrays - arrays where the indices are arbitrary strings or othe objects
+    # Database Indexing - 
+    # Caches - Used to expedite the access to data
+    # Sets - Identifying wether an entry exists, and finding it
 
 We expect you to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 

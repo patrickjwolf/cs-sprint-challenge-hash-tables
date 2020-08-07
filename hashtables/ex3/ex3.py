@@ -1,8 +1,31 @@
+from collections import Counter
+
 def intersection(arrays):
     """
     YOUR CODE HERE
     """
-    # Your code here
+    # convert lists into dictionary
+    count = 0
+    lst = []
+    for i in arrays:
+        # print(i)
+        if isinstance(i, list):
+            array1 = Counter(i)
+            count += 1
+            lst.append(array1)
+
+    result = Counter()
+
+    answer = []
+    for i in lst:
+        result += i
+
+    for (key, value) in result.items():
+        if value == count:
+            answer.append(key)
+
+
+    return answer
 
     return result
 
