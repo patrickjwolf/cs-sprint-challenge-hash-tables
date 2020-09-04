@@ -4,31 +4,19 @@ def intersection(arrays):
     """
     YOUR CODE HERE
     """
-    # convert lists into dictionary
-    count = 0
-    lst = []
-    for i in arrays:
-        # print(i)
-        if isinstance(i, list):
-            array1 = Counter(i)
-            count += 1
-            lst.append(array1)
 
-    result = Counter()
+    dict = {}
+    result = []
 
-    answer = []
-    for i in lst:
-        result += i
-
-    for (key, value) in result.items():
-        if value == count:
-            answer.append(key)
-
-
-    return answer
-
+    for arr in arrays:
+        for num in arr:
+            if num in dict:
+                dict[num] += 1
+            else:
+                dict[num] = 1
+            if dict[num] == len(arrays):
+                result.append(num)
     return result
-
 
 if __name__ == "__main__":
     arrays = []
